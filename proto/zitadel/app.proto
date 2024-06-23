@@ -89,7 +89,7 @@ message OIDCConfig {
     ];
     string client_id = 5 [
         (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-            example: "\"69629023906488334@ZITADEL\"";
+            example: "\"69629023906488334\"";
             description: "generated oauth2/oidc client id";
         }
     ];
@@ -223,7 +223,7 @@ message APIConfig {
     reserved 2;
     string client_id = 1 [
         (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-            example: "\"69629023906488334@ZITADEL\"";
+            example: "\"69629023906488334\"";
             description: "generated oauth2/oidc client_id";
         }
     ];

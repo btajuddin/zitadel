@@ -371,7 +371,7 @@ Edit `.env.local` to contain the details from the [Application setup section](#s
 
 ```sh
 OIDC_WELL_KNOWN_URL="https://tims-zitadel-instance-oj7iry.zitadel.cloud/.well-known/openid-configuration"
-OIDC_CLIENT_ID="248680248240075805@dev"
+OIDC_CLIENT_ID="248680248240075805"
 OIDC_CLIENT_SECRET="BJPhEJULSUXseC4geqg5Yg4wWMoy7RgZKar86mbIpt8ZekC5kixMzYGcXLDeeJv7"
 ```
 

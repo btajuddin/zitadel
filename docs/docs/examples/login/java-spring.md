@@ -158,7 +158,7 @@ This could look like:
 ```bash
 java \
   -Dspring.security.oauth2.client.provider.zitadel.issuer-uri=https://my-domain.zitadel.cloud \
-  -Dspring.security.oauth2.client.registration.zitadel.client-id=243861220627644836@example \
+  -Dspring.security.oauth2.client.registration.zitadel.client-id=243861220627644836 \
   -jar web/target/web-0.0.2-SNAPSHOT.jar
 ```
 

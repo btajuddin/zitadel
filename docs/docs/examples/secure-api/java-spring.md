@@ -106,7 +106,7 @@ This could look like:
 ```bash
 java \
   -Dspring.security.oauth2.resourceserver.opaquetoken.introspection-uri=https://my-domain.zitadel.cloud/oauth/v2/introspect  \
-  -Dspring.security.oauth2.resourceserver.opaquetoken.client-id=243861220627644836@example \
+  -Dspring.security.oauth2.resourceserver.opaquetoken.client-id=243861220627644836 \
   -Dspring.security.oauth2.resourceserver.opaquetoken.client-secret=WJKLF3kfPOi3optkg9vi3jmfjv8oj32nfiäohj!FSC09RWUSR \
   -jar web/target/web-0.0.2-SNAPSHOT.jar
 ```

@@ -632,7 +632,7 @@ message RefreshToken {
     zitadel.v1.ObjectDetails details = 2;
     string client_id = 3 [
         (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-            example: "\"69629023906488334@ZITADEL\"";
+            example: "\"69629023906488334\"";
             description: "oauth2/oidc client_id of the authorized application";
         }
     ];
@@ -662,7 +662,7 @@ message RefreshToken {
     ];
     repeated string audience = 8 [
         (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-            example: "[\"69629023906488334@ZITADEL\", \"69629023906481256\"]"
+            example: "[\"69629023906488334\", \"69629023906481256\"]"
             description: "audience of the initial auth request and of all access tokens created by this refresh token";
         }
     ];

@@ -131,7 +131,7 @@ go run main.go --domain <your domain> --key <key> -- clientID <clientID> --redir
 This could look like:
 
 ```bash
-go run main.go --domain my-domain.zitadel.cloud --key XKv2Lqd7YAq13NUZVUWZEWZeruqyzViM --clientID 243861220627644836@example --redirectURI http://localhost:8089/auth/callback
+go run main.go --domain my-domain.zitadel.cloud --key XKv2Lqd7YAq13NUZVUWZEWZeruqyzViM --clientID 243861220627644836 --redirectURI http://localhost:8089/auth/callback
 ```
 
 If you then visit on http://localhost:8089 you should get the following screen:

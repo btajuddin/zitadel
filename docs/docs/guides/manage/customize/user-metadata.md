@@ -114,14 +114,14 @@ When you decode the value of `id_token`, then the response will include the meta
   ],
   "at_hash": "lGIblkTr8faHz2zd0oTddA",
   "aud": [
-    "170086824411201793@portal",
-    "209806276543185153@portal",
+    "170086824411201793",
+    "209806276543185153",
     "170086774599581953"
   ],
   "auth_time": 1687418556,
-  "azp": "170086824411201793@portal",
+  "azp": "170086824411201793",
   "c_hash": "dA3wre4ytCJCn11f7cIm0A",
-  "client_id": "1700...1793@portal",
+  "client_id": "1700...1793",
   "email": "road.runner@zitadel.com",
   "email_verified": true,
   "exp": 1687422272,

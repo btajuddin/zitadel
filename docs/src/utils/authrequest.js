@@ -35,7 +35,7 @@ export default ({ children }) => {
     const organization_id = params.get("organization_id");
 
     setInstance(instance_param ?? "https://mydomain-xyza.zitadel.cloud/");
-    setClientId(client_id ?? "170086824411201793@yourapp");
+    setClientId(client_id ?? "170086824411201793");
     setRedirectUri(
       redirect_uri ?? "http://localhost:8080/api/auth/callback/zitadel"
     );

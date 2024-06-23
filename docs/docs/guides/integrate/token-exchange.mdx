@@ -249,8 +249,8 @@ The ID token is a JWT and contains the following claims:
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -260,8 +260,8 @@ The ID token is a JWT and contains the following claims:
   "iat": 1711098470,
   "auth_time": 1711098468,
   "amr": ["password", "pwd"],
-  "azp": "259254409320529922@portal",
-  "client_id": "259254409320529922@portal",
+  "azp": "259254409320529922",
+  "client_id": "259254409320529922",
   "at_hash": "t1T78s8RTVku2sxBg03RCQ",
   "c_hash": "PupC2crjOZAr6_O1uTlGdw",
   "name": "end user",
@@ -291,7 +291,7 @@ In this token exchange call we will reduce the scope and audience of the access 
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--u '259254409320529922@portal:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
+-u '259254409320529922:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
 -d 'subject_token=NaUAPHy5mLFQlwUCeUGYeDyhcQYuNhzTiYgwMor9BxP_bfMy2iDdLxJ87nntUc85vNyeHOY' \
 -d 'subject_token_type=urn:ietf:params:oauth:token-type:access_token' \
@@ -317,7 +317,7 @@ As indicated by the `token_type` the new access token can be used as Bearer. Onc
 ```bash
 curl -L -X POST 'http://localhost:9000/oauth/v2/introspect' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -u '259284000017809410@aggregates:ES1i1JWgGiHNW6bBljyynZyvQIlotEpVwzbgrTIYZzndOo2KxDkwap1WvdSdBjtk' \
+  -u '259284000017809410:ES1i1JWgGiHNW6bBljyynZyvQIlotEpVwzbgrTIYZzndOo2KxDkwap1WvdSdBjtk' \
   -d token=CV3iikwgHfBqeGmzFebMIlbdoo3EHEz30LbOKWa-19FL0irJxcbITiLtOvUxouG0xuqECd0 | jq
 ```
 
@@ -327,7 +327,7 @@ The introspection response would look like:
 {
   "active": true,
   "scope": "openid",
-  "client_id": "259254409320529922@portal",
+  "client_id": "259254409320529922",
   "token_type": "Bearer",
   "exp": 1711141849,
   "iat": 1711098649,
@@ -369,7 +369,7 @@ We can also use Token Exchange to change the type of token we are dealing with. 
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--u '259254409320529922@portal:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
+-u '259254409320529922:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
 -d 'subject_token=NaUAPHy5mLFQlwUCeUGYeDyhcQYuNhzTiYgwMor9BxP_bfMy2iDdLxJ87nntUc85vNyeHOY' \
 -d 'subject_token_type=urn:ietf:params:oauth:token-type:access_token' \
@@ -396,8 +396,8 @@ You can now inspect the access token JWT and see the following claims:
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -429,7 +429,7 @@ You can also obtain an ID token in the `id_token` response field by requestion a
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--d 'client_id=259254409320529922@portal' \
+-d 'client_id=259254409320529922' \
 -d 'client_secret=eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
 -d 'subject_token=eZCZcbA-lpS1UnbyLvG2Mw2p6ix7CiES3HCDKBn6KMebhMu34hwu9p86N6EgOmkN6estous' \
@@ -512,8 +512,8 @@ The ID token has the following claims:
   "iss": "http://localhost:9000",
   "sub": "259241944654282754",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -526,8 +526,8 @@ The ID token has the following claims:
     "password",
     "pwd"
   ],
-  "azp": "259254409320529922@portal",
-  "client_id": "259254409320529922@portal",
+  "azp": "259254409320529922",
+  "client_id": "259254409320529922",
   "at_hash": "t5_gjGi9MSOa3e50dPGCTA",
   "c_hash": "gor3CKV7IcUo05JqNwzhZw"
 }
@@ -543,7 +543,7 @@ In this example we will also request a JWT access token, so we can inspect it la
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--u '259254409320529922@portal:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
+-u '259254409320529922:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
 -d 'subject_token=NaUAPHy5mLFQlwUCeUGYeDyhcQYuNhzTiYgwMor9BxP_bfMy2iDdLxJ87nntUc85vNyeHOY' \
 -d 'subject_token_type=urn:ietf:params:oauth:token-type:access_token' \
@@ -572,8 +572,8 @@ In the access token [claims](/docs/apis/openidoauth/claims) we can see that the 
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -606,7 +606,7 @@ In the following example we are again requesting a JWT access token. Instead of 
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--u '259254409320529922@portal:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
+-u '259254409320529922:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
 -d 'subject_token=259242039378444290' \
 -d 'subject_token_type=urn:zitadel:params:oauth:token-type:user_id' \
@@ -636,8 +636,8 @@ The new access token looks similar to the last example. However, the audience is
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -661,8 +661,8 @@ In the ID Token we see the profile and email information of the end-user:
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -670,8 +670,8 @@ In the ID Token we see the profile and email information of the end-user:
   ],
   "exp": 1711143512,
   "iat": 1711100312,
-  "azp": "259254409320529922@portal",
-  "client_id": "259254409320529922@portal",
+  "azp": "259254409320529922",
+  "client_id": "259254409320529922",
   "act": {
     "iss": "http://localhost:9000",
     "sub": "259241944654282754"
@@ -698,7 +698,7 @@ If we use the previous example and append the `offline_access` scope, we will al
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--u '259254409320529922@portal:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
+-u '259254409320529922:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
 -d 'subject_token=259242039378444290' \
 -d 'subject_token_type=urn:zitadel:params:oauth:token-type:user_id' \
@@ -728,7 +728,7 @@ The refresh token can be used for the `refresh_token` grant:
 curl -L -X POST 'http://localhost:9000/oauth/v2/token' \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -H 'Accept: application/json' \
--u '259254409320529922@portal:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
+-u '259254409320529922:eNdXJzB5RK5CXSpa4HqEfbdDqlM7drpskEHq1RBYMby0tM1MaCidyWsWlp5mglbN' \
 -d 'grant_type=refresh_token' \
 -d 'refresh_token=Rh1SRrRBGkBAmyK7KxrMcHtZ0_ewzStK5-l6IDOQG5S6EmZ42gHkP9KdMP3u-cV2cgFzxcnaRHbae9ZjPq9tD0ZbPdvjgyER' | jq
 ```
@@ -751,8 +751,8 @@ If we inspect the ID token we can see that the actor claim is preserved, even af
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -760,8 +760,8 @@ If we inspect the ID token we can see that the actor claim is preserved, even af
   ],
   "exp": 1711159427,
   "iat": 1711116227,
-  "azp": "259254409320529922@portal",
-  "client_id": "259254409320529922@portal",
+  "azp": "259254409320529922",
+  "client_id": "259254409320529922",
   "act": {
     "iss": "http://localhost:9000",
     "sub": "259241944654282754"
@@ -803,8 +803,8 @@ The `client_assertion` has the following claims:
 
 ```json
 {
-  "iss": "259297773508165634@portal",
-  "sub": "259297773508165634@portal",
+  "iss": "259297773508165634",
+  "sub": "259297773508165634",
   "aud": [
     "http://localhost:9000"
   ],
@@ -817,7 +817,7 @@ And the `subject_token`:
 
 ```json
 {
-  "iss": "259297773508165634@portal",
+  "iss": "259297773508165634",
   "sub": "259242039378444290",
   "aud": [
     "http://localhost:9000"
@@ -849,8 +849,8 @@ And again the access token claims:
   "iss": "http://localhost:9000",
   "sub": "259242039378444290",
   "aud": [
-    "259254409320529922@portal",
-    "259297773508165634@portal",
+    "259254409320529922",
+    "259297773508165634",
     "259254317079330818",
     "259254020357488642",
     "259256588127174658",
@@ -892,7 +892,7 @@ In the [instance event list](/docs/concepts/eventstore/overview) the `User imper
     "issuer": "http://localhost:9000",
     "user_id": "259241944654282754"
   },
-  "applicationId": "259297773508165634@portal",
+  "applicationId": "259297773508165634",
 }
 ```
 
